@@ -1,4 +1,4 @@
-package s2recursion;
+package recursion;
 
 import java.util.Arrays;
 
