@@ -32,6 +32,7 @@ public class Recursion {
         else
             return isPalindrome(s.substring(start + 1, end));
     }
+
     private int factorial(int n) {
         if (n < 0) {
             return -1;
@@ -53,6 +54,19 @@ public class Recursion {
         }
     }
 
+    private int powerOf2(int n) {
+        if (n < 1) return 0;
+        if (n == 1) {
+            System.out.println("power: " + 1);
+            return 1;
+        } else {
+            int prev = powerOf2(n / 2);
+            int cur = prev * 2;
+            System.out.println("power: " + cur);
+            return cur;
+        }
+    }
+
     public static void main(String[] args) {
         Recursion r = new Recursion();
         System.out.println(r.factorial(10));
@@ -63,5 +77,8 @@ public class Recursion {
             fibo[i] = r.fibonacci(i);
         }
         System.out.println(Arrays.toString(fibo));
+
+        // power of 4
+        System.out.println("powerOf2(4): " + r.powerOf2(16));
     }
 }
