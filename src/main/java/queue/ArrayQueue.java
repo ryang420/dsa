@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.Scanner;
 
 public class ArrayQueue {
-    private int front, rear, queueSize;
-    private int[] arr;
+    private int front;
+    private int rear;
+    private final int queueSize;
+    private final int[] arr;
 
     public ArrayQueue(int size) {
         front = rear = -1;
@@ -54,7 +56,7 @@ public class ArrayQueue {
     public static void main(String[] args) {
         ArrayQueue que = new ArrayQueue(3);
 
-        char key = ' ';
+        char key;
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
         while (loop) {

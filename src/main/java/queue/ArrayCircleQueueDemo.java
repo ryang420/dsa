@@ -6,7 +6,7 @@ public class ArrayCircleQueueDemo {
     public static void main(String[] args) {
         CircleArrayQueue queue = new CircleArrayQueue(3);
 
-        char key = ' ';
+        char key;
         Scanner scanner = new Scanner(System.in);
         boolean loop = true;
         while (loop) {
